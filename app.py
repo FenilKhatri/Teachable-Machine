@@ -126,8 +126,8 @@ else:
     with col1:
         st.subheader("Normal Casting")
         # IMPORTANT: Replace with the actual path to your normal example image
-        st.image("ok_example.jpeg", caption="A part that would pass inspection.")
+        st.image("Not_Defective.jpeg", caption="A part that would pass inspection.")
     with col2:
         st.subheader("Anomaly (Defective)")
         # IMPORTANT: Replace with the actual path to your defective example image
-        st.image("def_example.jpeg", caption="A part with a casting defect.")
+        st.image("Defecctive.jpeg", caption="A part with a casting defect.")
