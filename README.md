@@ -49,7 +49,7 @@ impeller-anomaly-detector/
 
 ## ☁️ Deployment
 The app can be deployed for free on Streamlit Community Cloud.
-🔗 Live Demo: [**link**]
+🔗 Live Demo: [**https://anomaly-detection-fenil.streamlit.app/**]
 
 ## 📊 Dataset
 The original model was trained using the Teachable Machine with a curated dataset of impeller images.
