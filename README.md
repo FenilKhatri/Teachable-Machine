@@ -1,38 +1,58 @@
+# ⚙️ Cast Metal Impeller Anomaly Detection (Streamlit App)
+ A Streamlit web application for real-time detection of manufacturing defects in cast metal impellers. This project uses a deep learning model trained using Teachable Machine and deployed via Streamlit to classify images as 'Normal' or 'Anomaly'.
 
-# Timelytics
+## 📋 Table of Contents
+ - Project Overview
+ - Features
+ - Technology Stack
+ - Project Structure
+ - Setup and Installation
+ - Deployment
+ - Dataset
+ - License
 
-## Optimize your supply chain with advanced forecasting techniques.
+## 📝 Project Overview
+  Identifying defects in cast parts like impellers is essential to quality control in manufacturing. Manual inspection is labor-intensive and inconsistent. This app introduces an AI-powered inspection system using a trained TensorFlow model to analyze impeller images and determine whether they are defective or acceptable. It’s all wrapped in a user-friendly Streamlit interface for ease of use.
 
-Timelytics is an ensemble model that utilizes three powerful machine learning algorithms - XGBoost, Random Forests, and Support Vector Machines (SVM) - to accurately forecast Order to Delivery (OTD) times. By combining the strengths of these three algorithms, Timelytics provides a robust and reliable prediction of OTD times, helping businesses to optimize their supply chain operations.
+## ✨ Features
+  - 📷 Image Upload: Upload an image of a cast impeller for instant analysis.
+  - ⚡ Real-Time Analysis: Classifies the image as ‘Normal’ or ‘Anomaly’ using a CNN.
+  - 🎯 Confidence Score: Shows prediction confidence with visual feedback.
+  - ✅ Quality Decision: Suggests actions based on the classification result.
+  - 🧾 Informative Sidebar: Provides project info and how-to-use instructions.
+  - 📚 Built-in Examples: Displays example images of normal and defective castings.
 
-With Timelytics, businesses can identify potential bottlenecks and delays in their supply chain and take proactive measures to address them, reducing lead times and improving delivery times. The model utilizes historical data on order processing times, production lead times, shipping times, and other relevant variables to generate accurate forecasts of OTD times. These forecasts can be used to optimize inventory management, improve customer service, and increase overall efficiency in the supply chain.
+## 🛠️ Technology Stack
+  - **Model Training:** Google’s Teachable Machine
+  - **Deep Learning Framework:** TensorFlow / Keras 3
+  - **App Framework:** Streamlit
+  - **Language:** Python 3.10
+  - **Libraries:** NumPy, Pillow
+  - **Deployment:** Streamlit Community Cloud
 
+## 📂 Project Structure
 
+````
+impeller-anomaly-detector/
+│
+├── my_model/               # Trained TensorFlow SavedModel directory
+│   ├── saved_model.pb
+│   └── variables/
+│
+├── app.py                  # Main Streamlit application file
+├── labels.txt              # Text file with class names
+├── requirements.txt        # Dependencies for running the app
+├── ok_example.jpeg         # Sample image of a normal impeller
+├── def_example.jpeg        # Sample image of a defective impeller
+└── README.md               # This file
+````
 
-## Dataset
+## ☁️ Deployment
+The app can be deployed for free on Streamlit Community Cloud.
+🔗 Live Demo: [**link**]
 
-[Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
-
-"brazilian-ecommerce.zip" will get downloaded in the current data folder.
-
-In the data folder execute the following commands to unzip:
-
-```
-sudo apt-get install unzip
-unzip brazilian-ecommerce.zip
-```
-
-
-Source - 
-The dataset consists of real-world delivery details sourced from a Brazilian E-commerce Company which was scrubbed and anonymized.
-
-It consists of multiple tables which include relevant information about the customer, seller, order, location etc. The individual tables are interconnected as shown in the following schema. Relevant features will be extracted/designed from this data and then be used to train our supervised ML model.
-
-![dataset-schema](./assets/dataset_schema.png)
-
-
-## ⭐ References:
-1. https://30days.streamlit.app/
-2. https://docs.streamlit.io/streamlit-community-cloud/get-started/deploy-an-app
-3. https://streamlit-cloud-example-apps-streamlit-app-sw3u0r.streamlit.app/?hsCtaTracking=28f10086-a3a5-4ea8-9403-f3d52bf26184|22470002-acb1-4d93-8286-00ee4f8a46fb
-4. https://docs.streamlit.io/library/advanced-features/configuration
+## 📊 Dataset
+The original model was trained using the Teachable Machine with a curated dataset of impeller images.
+For advanced training, you can use the following:
+  - **Kaggle:** Casting Product Image Data for Quality Inspection
+  - **Dataset Link:** https://www.kaggle.com/datasets/ravirajsinh45/real-life-industrial-dataset-of-casting-product
